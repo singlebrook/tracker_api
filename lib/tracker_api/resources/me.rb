@@ -3,19 +3,19 @@ module TrackerApi
     class Me
       include Shared::Base
 
-      attribute :name, String
-      attribute :initials, String
-      attribute :username, String
+      attribute :name, Types::String
+      attribute :initials, Types::String
+      attribute :username, Types::String
       attribute :time_zone, TimeZone
-      attribute :api_token, String
-      attribute :has_google_identity, Boolean
-      attribute :project_ids, [Integer]
-      attribute :projects, [MembershipSummary]
-      attribute :workspace_ids, [Integer]
-      attribute :workspaces, [Workspace]
-      attribute :email, String
-      attribute :receives_in_app_notifications, Boolean
-      attribute :kind, String
+      attribute :api_token, Types::String
+      attribute :has_google_identity, Types::Boolean
+      attribute :project_ids, Types::Array(Types::Integer)
+      attribute :projects, Types::Array(MembershipSummary)
+      attribute :workspace_ids, Types::Array(Types::Integer)
+      attribute :workspaces, Types::Array(Workspace)
+      attribute :email, Types::String
+      attribute :receives_in_app_notifications, Types::Boolean
+      attribute :kind, Types::String
     end
   end
 end

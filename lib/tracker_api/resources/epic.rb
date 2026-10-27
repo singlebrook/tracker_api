@@ -5,21 +5,21 @@ module TrackerApi
 
       attribute :client
 
-      attribute :comment_ids, [Integer]
-      attribute :comments, [Comment]
-      attribute :created_at, DateTime
-      attribute :description, String
-      attribute :follower_ids, [Integer]
-      attribute :followers, [Person]
-      attribute :kind, String
+      attribute :comment_ids, Types::Array(Types::Integer)
+      attribute :comments, Types::Array(Comment)
+      attribute :created_at, Types::DateTime
+      attribute :description, Types::String
+      attribute :follower_ids, Types::Array(Types::Integer)
+      attribute :followers, Types::Array(Person)
+      attribute :kind, Types::String
       attribute :label, Label
-      attribute :label_id, Integer
-      attribute :name, String
-      attribute :project_id, Integer
-      attribute :updated_at, DateTime
-      attribute :completed_at, DateTime
-      attribute :projected_completion, DateTime
-      attribute :url, String
+      attribute :label_id, Types::Integer
+      attribute :name, Types::String
+      attribute :project_id, Types::Integer
+      attribute :updated_at, Types::DateTime
+      attribute :completed_at, Types::DateTime
+      attribute :projected_completion, Types::DateTime
+      attribute :url, Types::String
 
       class UpdateRepresenter < Representable::Decorator
         include Representable::Hash

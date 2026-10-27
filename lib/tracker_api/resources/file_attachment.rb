@@ -5,20 +5,20 @@ module TrackerApi
 
       attribute :comment, Comment
 
-      attribute :id, Integer
-      attribute :big_url, String
-      attribute :content_type, String
-      attribute :created_at, DateTime
-      attribute :download_url, String
-      attribute :filename, String
-      attribute :height, Integer
-      attribute :kind, String
-      attribute :size, Integer
-      attribute :thumbnail_url, String
-      attribute :thumbnailable, Boolean
-      attribute :uploaded, Boolean
-      attribute :uploader_id, Integer
-      attribute :width, Integer
+      attribute :id, Types::Integer
+      attribute :big_url, Types::String
+      attribute :content_type, Types::String
+      attribute :created_at, Types::DateTime
+      attribute :download_url, Types::String
+      attribute :filename, Types::String
+      attribute :height, Types::Integer
+      attribute :kind, Types::String
+      attribute :size, Types::Integer
+      attribute :thumbnail_url, Types::String
+      attribute :thumbnailable, Types::Boolean
+      attribute :uploaded, Types::Boolean
+      attribute :uploader_id, Types::Integer
+      attribute :width, Types::Integer
 
       def delete
         comment.delete_attachments([id])

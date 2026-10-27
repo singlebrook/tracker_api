@@ -6,40 +6,40 @@ module TrackerApi
       attribute :client
 
       attribute :account, Account
-      attribute :account_id, Integer
-      attribute :atom_enabled, Boolean
-      attribute :bugs_and_chores_are_estimatable, Boolean
-      attribute :created_at, DateTime
-      attribute :current_iteration_number, Integer
-      attribute :current_velocity, Integer
-      attribute :description, String
-      attribute :enable_following, Boolean
-      attribute :enable_incoming_emails, Boolean
-      attribute :enable_planned_mode, Boolean
-      attribute :enable_tasks, Boolean
-      attribute :epic_ids, [Integer]
-      attribute :epics, [Epic]
-      attribute :has_google_domain, Boolean
-      attribute :initial_velocity, Integer
-      attribute :iteration_length, Integer
-      attribute :kind, String
-      attribute :label_ids, [Integer]
-      attribute :labels, [Label]
-      attribute :name, String
-      attribute :number_of_done_iterations_to_show, Integer
-      attribute :point_scale, String
-      attribute :point_scale_is_custom, Boolean
-      attribute :profile_content, String
-      attribute :public, Boolean
-      attribute :start_date, DateTime
-      attribute :start_time, DateTime
-      attribute :status, String
+      attribute :account_id, Types::Integer
+      attribute :atom_enabled, Types::Boolean
+      attribute :bugs_and_chores_are_estimatable, Types::Boolean
+      attribute :created_at, Types::DateTime
+      attribute :current_iteration_number, Types::Integer
+      attribute :current_velocity, Types::Integer
+      attribute :description, Types::String
+      attribute :enable_following, Types::Boolean
+      attribute :enable_incoming_emails, Types::Boolean
+      attribute :enable_planned_mode, Types::Boolean
+      attribute :enable_tasks, Types::Boolean
+      attribute :epic_ids, Types::Array(Types::Integer)
+      attribute :epics, Types::Array(Epic)
+      attribute :has_google_domain, Types::Boolean
+      attribute :initial_velocity, Types::Integer
+      attribute :iteration_length, Types::Integer
+      attribute :kind, Types::String
+      attribute :label_ids, Types::Array(Types::Integer)
+      attribute :labels, Types::Array(Label)
+      attribute :name, Types::String
+      attribute :number_of_done_iterations_to_show, Types::Integer
+      attribute :point_scale, Types::String
+      attribute :point_scale_is_custom, Types::Boolean
+      attribute :profile_content, Types::String
+      attribute :public, Types::Boolean
+      attribute :start_date, Types::DateTime
+      attribute :start_time, Types::DateTime
+      attribute :status, Types::String
       attribute :time_zone, TimeZone
-      attribute :updated_at, DateTime
-      attribute :velocity_averaged_over, Integer
-      attribute :version, Integer
-      attribute :week_start_day, String
-      attribute :webhooks, [Webhook]
+      attribute :updated_at, Types::DateTime
+      attribute :velocity_averaged_over, Types::Integer
+      attribute :version, Types::Integer
+      attribute :week_start_day, Types::String
+      attribute :webhooks, Types::Array(Webhook)
 
       # @return [String] comma separated list of labels
       def label_list

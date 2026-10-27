@@ -5,22 +5,22 @@ module TrackerApi
 
       attribute :client
 
-      attribute :project_id, Integer
-      attribute :story_id, Integer
-      attribute :epic_id, Integer
-      attribute :text, String
-      attribute :person_id, Integer
+      attribute :project_id, Types::Integer
+      attribute :story_id, Types::Integer
+      attribute :epic_id, Types::Integer
+      attribute :text, Types::String
+      attribute :person_id, Types::Integer
       attribute :person, Person
-      attribute :created_at, DateTime
-      attribute :updated_at, DateTime
-      attribute :file_attachment_ids, [Integer]
-      attribute :file_attachments, [FileAttachment]
-      attribute :google_attachment_ids, [Integer]
-      attribute :file_attachment_ids_to_add, [Integer]
-      attribute :file_attachment_ids_to_remove, [Integer]
-      attribute :commit_identifier, String
-      attribute :commit_type, String
-      attribute :kind, String
+      attribute :created_at, Types::DateTime
+      attribute :updated_at, Types::DateTime
+      attribute :file_attachment_ids, Types::Array(Types::Integer)
+      attribute :file_attachments, Types::Array(FileAttachment)
+      attribute :google_attachment_ids, Types::Array(Types::Integer)
+      attribute :file_attachment_ids_to_add, Types::Array(Types::Integer)
+      attribute :file_attachment_ids_to_remove, Types::Array(Types::Integer)
+      attribute :commit_identifier, Types::String
+      attribute :commit_type, Types::String
+      attribute :kind, Types::String
 
       class UpdateRepresenter < Representable::Decorator
         include Representable::Hash

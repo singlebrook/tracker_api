@@ -5,18 +5,18 @@ module TrackerApi
 
       attribute :client
 
-      attribute :id, Integer
-      attribute :story_id, Integer
-      attribute :epic_id, Integer
-      attribute :owner, String
-      attribute :repo, String
-      attribute :number, Integer
-      attribute :host_url, String
-      attribute :original_url, String
-      attribute :status, String
-      attribute :created_at, DateTime
-      attribute :updated_at, DateTime
-      attribute :kind, String
+      attribute :id, Types::Integer
+      attribute :story_id, Types::Integer
+      attribute :epic_id, Types::Integer
+      attribute :owner, Types::String
+      attribute :repo, Types::String
+      attribute :number, Types::Integer
+      attribute :host_url, Types::String
+      attribute :original_url, Types::String
+      attribute :status, Types::String
+      attribute :created_at, Types::DateTime
+      attribute :updated_at, Types::DateTime
+      attribute :kind, Types::String
     end
   end
 end

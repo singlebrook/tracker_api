@@ -4,15 +4,15 @@ module TrackerApi
       include Shared::Base
 
       attribute :client
-      attribute :project_id, Integer
+      attribute :project_id, Types::Integer
 
-      attribute :story_id, Integer
-      attribute :person_id, Integer
-      attribute :description, String
-      attribute :resolved, Boolean
-      attribute :created_at, DateTime
-      attribute :updated_at, DateTime
-      attribute :kind, String
+      attribute :story_id, Types::Integer
+      attribute :person_id, Types::Integer
+      attribute :description, Types::String
+      attribute :resolved, Types::Boolean
+      attribute :created_at, Types::DateTime
+      attribute :updated_at, Types::DateTime
+      attribute :kind, Types::String
     end
   end
 end

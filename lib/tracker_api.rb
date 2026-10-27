@@ -12,6 +12,9 @@ else
   require 'core_ext/object/blank'
 end
 require 'equalizer'
+require 'dry/types'
+require 'dry/struct'
+require 'dry/schema'
 
 require 'json'
 require 'representable/hash'
@@ -26,6 +29,7 @@ module TrackerApi
   autoload :Client, 'tracker_api/client'
   autoload :Logger, 'tracker_api/logger'
   autoload :FileUtility, 'tracker_api/file_utility'
+  autoload :Types, 'tracker_api/types'
 
   module Errors
     class UnexpectedData < StandardError; end
@@ -69,7 +73,10 @@ module TrackerApi
 
   module Resources
     module Shared
+      autoload :Attributes, 'tracker_api/resources/shared/attributes'
       autoload :Base, 'tracker_api/resources/shared/base'
+      autoload :DirtyTracking, 'tracker_api/resources/shared/dirty_tracking'
+      autoload :NullifyBlank, 'tracker_api/resources/shared/nullify_blank'
       autoload :Collection, 'tracker_api/resources/shared/collection'
     end
     autoload :Activity, 'tracker_api/resources/activity'

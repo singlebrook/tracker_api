@@ -5,17 +5,17 @@ module TrackerApi
 
       attribute :client
 
-      attribute :project_id, Integer
-      attribute :name, String
-      attribute :description, String
-      attribute :current_state, String # (accepted, delivered, finished, started, rejected, planned, unstarted, unscheduled)
-      attribute :accepted_at, DateTime
-      attribute :deadline, DateTime
-      attribute :labels, [Label]
-      attribute :created_at, DateTime
-      attribute :updated_at, DateTime
-      attribute :url, String
-      attribute :kind, String
+      attribute :project_id, Types::Integer
+      attribute :name, Types::String
+      attribute :description, Types::String
+      attribute :current_state, Types::String # (accepted, delivered, finished, started, rejected, planned, unstarted, unscheduled)
+      attribute :accepted_at, Types::DateTime
+      attribute :deadline, Types::DateTime
+      attribute :labels, Types::Array(Label)
+      attribute :created_at, Types::DateTime
+      attribute :updated_at, Types::DateTime
+      attribute :url, Types::String
+      attribute :kind, Types::String
 
       # Provides a list of all the stories in the release.
       #

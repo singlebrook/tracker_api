@@ -3,11 +3,11 @@ module TrackerApi
     class Person
       include Shared::Base
 
-      attribute :kind, String
-      attribute :name, String
-      attribute :email, String
-      attribute :initials, String
-      attribute :username, String
+      attribute :kind, Types::String
+      attribute :name, Types::String
+      attribute :email, Types::String
+      attribute :initials, Types::String
+      attribute :username, Types::String
     end
   end
 end

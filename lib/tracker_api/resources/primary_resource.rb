@@ -3,10 +3,10 @@ module TrackerApi
     class PrimaryResource
       include Shared::Base
 
-      attribute :kind, String
-      attribute :name, String
-      attribute :story_type, String
-      attribute :url, String
+      attribute :kind, Types::String
+      attribute :name, Types::String
+      attribute :story_type, Types::String
+      attribute :url, Types::String
     end
   end
 end

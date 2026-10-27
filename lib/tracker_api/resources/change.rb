@@ -3,12 +3,12 @@ module TrackerApi
     class Change
       include Shared::Base
 
-      attribute :change_type, String
-      attribute :kind, String
-      attribute :name, String
-      attribute :new_values, Hash
-      attribute :original_values, Hash
-      attribute :story_type, String
+      attribute :change_type, Types::String
+      attribute :kind, Types::String
+      attribute :name, Types::String
+      attribute :new_values, Types::Hash
+      attribute :original_values, Types::Hash
+      attribute :story_type, Types::String
     end
   end
 end

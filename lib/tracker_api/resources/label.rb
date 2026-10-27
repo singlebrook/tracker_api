@@ -3,11 +3,11 @@ module TrackerApi
     class Label
       include Shared::Base
 
-      attribute :created_at, DateTime
-      attribute :kind, String
-      attribute :name, String
-      attribute :project_id, Integer
-      attribute :updated_at, DateTime
+      attribute :created_at, Types::DateTime
+      attribute :kind, Types::String
+      attribute :name, Types::String
+      attribute :project_id, Types::Integer
+      attribute :updated_at, Types::DateTime
 
       class UpdateRepresenter < Representable::Decorator
         include Representable::Hash

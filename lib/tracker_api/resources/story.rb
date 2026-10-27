@@ -5,41 +5,41 @@ module TrackerApi
 
       attribute :client
 
-      attribute :accepted_at, DateTime
-      attribute :after_id, Integer
-      attribute :before_id, Integer
-      attribute :blockers, [Blocker]
-      attribute :comment_ids, [Integer]
-      attribute :comments, [Comment]
-      attribute :created_at, DateTime
-      attribute :current_state, String # (accepted, delivered, finished, started, rejected, planned, unstarted, unscheduled)
-      attribute :deadline, DateTime
-      attribute :description, String
-      attribute :estimate, Float
-      attribute :external_id, String
-      attribute :follower_ids, [Integer]
-      attribute :followers, [Person]
-      attribute :integration_id, Integer
-      attribute :kind, String
-      attribute :label_ids, [Integer]
-      attribute :labels, [Label]
-      attribute :name, String
-      attribute :owned_by_id, Integer # deprecated!
+      attribute :accepted_at, Types::DateTime
+      attribute :after_id, Types::Integer
+      attribute :before_id, Types::Integer
+      attribute :blockers, Types::Array(Blocker)
+      attribute :comment_ids, Types::Array(Types::Integer)
+      attribute :comments, Types::Array(Comment)
+      attribute :created_at, Types::DateTime
+      attribute :current_state, Types::String # (accepted, delivered, finished, started, rejected, planned, unstarted, unscheduled)
+      attribute :deadline, Types::DateTime
+      attribute :description, Types::String
+      attribute :estimate, Types::Float
+      attribute :external_id, Types::String
+      attribute :follower_ids, Types::Array(Types::Integer)
+      attribute :followers, Types::Array(Person)
+      attribute :integration_id, Types::Integer
+      attribute :kind, Types::String
+      attribute :label_ids, Types::Array(Types::Integer)
+      attribute :labels, Types::Array(Label)
+      attribute :name, Types::String
+      attribute :owned_by_id, Types::Integer # deprecated!
       attribute :owned_by, Person
-      attribute :owner_ids, [Integer]
-      attribute :owners, [Person]
-      attribute :planned_iteration_number, Integer
-      attribute :project_id, Integer
-      attribute :pull_requests, [PullRequest]
+      attribute :owner_ids, Types::Array(Types::Integer)
+      attribute :owners, Types::Array(Person)
+      attribute :planned_iteration_number, Types::Integer
+      attribute :project_id, Types::Integer
+      attribute :pull_requests, Types::Array(PullRequest)
       attribute :requested_by, Person
-      attribute :requested_by_id, Integer
-      attribute :reviews, [Review]
-      attribute :story_type, String # (feature, bug, chore, release)
-      attribute :task_ids, [Integer]
-      attribute :tasks, [Task]
-      attribute :transitions, [StoryTransition]
-      attribute :updated_at, DateTime
-      attribute :url, String
+      attribute :requested_by_id, Types::Integer
+      attribute :reviews, Types::Array(Review)
+      attribute :story_type, Types::String # (feature, bug, chore, release)
+      attribute :task_ids, Types::Array(Types::Integer)
+      attribute :tasks, Types::Array(Task)
+      attribute :transitions, Types::Array(StoryTransition)
+      attribute :updated_at, Types::DateTime
+      attribute :url, Types::String
 
 
       class UpdateRepresenter < Representable::Decorator
@@ -68,7 +68,7 @@ module TrackerApi
         # - The next issue is that there is no way to delete all the labels from a Story with
         #   the current implementation.
         #
-        # NOTE: There are two solutions: 1) remove dirty tracking 2) rewrite without virtus
+        # NOTE: The solution would be to remove dirty tracking.
         # SEE: https://github.com/dashofcode/tracker_api/pull/98
         collection :labels, class: Label, decorator: Label::UpdateRepresenter, render_empty: false
 

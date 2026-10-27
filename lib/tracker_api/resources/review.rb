@@ -5,15 +5,15 @@ module TrackerApi
 
       attribute :client
 
-      attribute :id, Integer
-      attribute :story_id, Integer
-      attribute :project_id, Integer
-      attribute :review_type_id, Integer
-      attribute :reviewer_id, Integer
-      attribute :status, String # (unstarted, in_review, pass, revise)
-      attribute :created_at, DateTime
-      attribute :updated_at, DateTime
-      attribute :kind, String
+      attribute :id, Types::Integer
+      attribute :story_id, Types::Integer
+      attribute :project_id, Types::Integer
+      attribute :review_type_id, Types::Integer
+      attribute :reviewer_id, Types::Integer
+      attribute :status, Types::String # (unstarted, in_review, pass, revise)
+      attribute :created_at, Types::DateTime
+      attribute :updated_at, Types::DateTime
+      attribute :kind, Types::String
       attribute :review_type, ReviewType
 
       class UpdateRepresenter < Representable::Decorator

@@ -3,13 +3,13 @@ module TrackerApi
     class ReviewType
       include Shared::Base
 
-      attribute :id, Integer
-      attribute :project_id, Integer
-      attribute :name, String
-      attribute :hidden, Boolean
-      attribute :created_at, DateTime
-      attribute :updated_at, DateTime
-      attribute :kind, String
+      attribute :id, Types::Integer
+      attribute :project_id, Types::Integer
+      attribute :name, Types::String
+      attribute :hidden, Types::Boolean
+      attribute :created_at, Types::DateTime
+      attribute :updated_at, Types::DateTime
+      attribute :kind, Types::String
     end
   end
 end

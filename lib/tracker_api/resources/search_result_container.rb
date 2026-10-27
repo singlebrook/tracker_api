@@ -3,10 +3,10 @@ module TrackerApi
     class SearchResultContainer
       include Shared::Base
 
-      attribute :query, String
+      attribute :query, Types::String
       attribute :stories, Resources::StoriesSearchResult
       attribute :epics, Resources::EpicsSearchResult
-      attribute :kind, String
+      attribute :kind, Types::String
     end
   end
 end

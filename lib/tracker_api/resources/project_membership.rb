@@ -3,12 +3,12 @@ module TrackerApi
     class ProjectMembership
       include Shared::Base
 
-      attribute :person_id, Integer
-      attribute :project_id, Integer
-      attribute :role, String
-      attribute :project_color, String
-      attribute :wants_comment_notification_emails, Boolean
-      attribute :kind, String
+      attribute :person_id, Types::Integer
+      attribute :project_id, Types::Integer
+      attribute :role, Types::String
+      attribute :project_color, Types::String
+      attribute :wants_comment_notification_emails, Types::Boolean
+      attribute :kind, Types::String
       attribute :person, Person
     end
   end

@@ -3,8 +3,8 @@ module TrackerApi
     class StoryTransition
       include Shared::Base
 
-      attribute :state, String
-      attribute :occurred_at, DateTime
+      attribute :state, Types::String
+      attribute :occurred_at, Types::DateTime
     end
   end
 end

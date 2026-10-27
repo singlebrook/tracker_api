@@ -3,19 +3,19 @@ module TrackerApi
     class CycleTimeDetails
       include Shared::Base
 
-      attribute :project_id, Integer
-      attribute :iteration_number, Integer
-      attribute :total_cycle_time, Integer
-      attribute :started_time, Integer
-      attribute :started_count, Integer
-      attribute :finished_time, Integer
-      attribute :finished_count, Integer
-      attribute :delivered_time, Integer
-      attribute :delivered_count, Integer
-      attribute :rejected_time, Integer
-      attribute :rejected_count, Integer
-      attribute :story_id, Integer
-      attribute :kind, String
+      attribute :project_id, Types::Integer
+      attribute :iteration_number, Types::Integer
+      attribute :total_cycle_time, Types::Integer
+      attribute :started_time, Types::Integer
+      attribute :started_count, Types::Integer
+      attribute :finished_time, Types::Integer
+      attribute :finished_count, Types::Integer
+      attribute :delivered_time, Types::Integer
+      attribute :delivered_count, Types::Integer
+      attribute :rejected_time, Types::Integer
+      attribute :rejected_count, Types::Integer
+      attribute :story_id, Types::Integer
+      attribute :kind, Types::String
     end
   end
 end

@@ -1,13 +1,11 @@
 module TrackerApi
   module Resources
-    class TimeZone
-      include Virtus.value_object
+    class TimeZone < Dry::Struct
+      transform_keys(&:to_sym)
 
-      values do
-        attribute :offset, String
-        attribute :olson_name, String
-        attribute :kind, String
-      end
+      attribute :offset, Types::String.default(nil)
+      attribute :olson_name, Types::String.default(nil)
+      attribute :kind, Types::String.default(nil)
     end
   end
 end

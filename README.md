@@ -9,7 +9,7 @@
 
 This gem allows you to easily use the [Pivotal Tracker v5 API](https://www.pivotaltracker.com/help/api/rest/v5).
 
-It’s powered by [Faraday](https://github.com/lostisland/faraday) and [Virtus](https://github.com/solnic/virtus).
+It’s powered by [Faraday](https://github.com/lostisland/faraday) and [dry-rb](https://dry-rb.org) ([dry-types](https://dry-rb.org/gems/dry-types), [dry-struct](https://dry-rb.org/gems/dry-struct) and [dry-schema](https://dry-rb.org/gems/dry-schema)).
 
 ## Compatibility
 
@@ -121,7 +121,7 @@ story.comments(fields: ':default,person')                                 # Eage
 ## Warning
 
 Direct mutation of an attribute value skips coercion and dirty tracking. Please use direct assignment or the specialized add_* methods to get expected behavior.
-https://github.com/solnic/virtus#important-note-about-member-coercions
+Attribute values are only coerced and tracked when they are assigned through an attribute writer.
 
 This will cause coercion and dirty tracking to be bypassed and the new label will not be saved.
 ```ruby

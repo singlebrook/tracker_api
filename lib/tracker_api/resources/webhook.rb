@@ -5,12 +5,12 @@ module TrackerApi
 
       attribute :client
 
-      attribute :kind, String
-      attribute :project_id, Integer
-      attribute :webhook_url, String
-      attribute :webhook_version, String
-      attribute :created_at, DateTime
-      attribute :updated_at, DateTime
+      attribute :kind, Types::String
+      attribute :project_id, Types::Integer
+      attribute :webhook_url, Types::String
+      attribute :webhook_version, Types::String
+      attribute :created_at, Types::DateTime
+      attribute :updated_at, Types::DateTime
 
       class UpdateRepresenter < Representable::Decorator
         include Representable::Hash

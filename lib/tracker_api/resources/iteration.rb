@@ -1,25 +1,25 @@
 module TrackerApi
   module Resources
     class Iteration
-      include Virtus.model
+      include Shared::Attributes
       include Equalizer.new(:number, :project_id)
 
       attribute :client
 
-      attribute :finish, DateTime
-      attribute :kind, String
-      attribute :length, Integer
-      attribute :number, Integer
-      attribute :planned, Boolean
-      attribute :project_id, Integer
-      attribute :start, DateTime
-      attribute :stories, [Story]
-      attribute :story_ids, [Integer]
-      attribute :team_strength, Float
-      attribute :velocity, Float
-      attribute :points, Integer
-      attribute :accepted_points, Integer
-      attribute :effective_points, Float
+      attribute :finish, Types::DateTime
+      attribute :kind, Types::String
+      attribute :length, Types::Integer
+      attribute :number, Types::Integer
+      attribute :planned, Types::Boolean
+      attribute :project_id, Types::Integer
+      attribute :start, Types::DateTime
+      attribute :stories, Types::Array(Story)
+      attribute :story_ids, Types::Array(Types::Integer)
+      attribute :team_strength, Types::Float
+      attribute :velocity, Types::Float
+      attribute :points, Types::Integer
+      attribute :accepted_points, Types::Integer
+      attribute :effective_points, Types::Float
 
       def stories=(data)
         super.each { |s| s.client = client }

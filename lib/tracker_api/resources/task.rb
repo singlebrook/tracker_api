@@ -5,14 +5,14 @@ module TrackerApi
 
       attribute :client
 
-      attribute :project_id, Integer
-      attribute :story_id, Integer
-      attribute :description, String
-      attribute :complete, Boolean
-      attribute :position, Integer
-      attribute :created_at, DateTime
-      attribute :updated_at, DateTime
-      attribute :kind, String
+      attribute :project_id, Types::Integer
+      attribute :story_id, Types::Integer
+      attribute :description, Types::String
+      attribute :complete, Types::Boolean
+      attribute :position, Types::Integer
+      attribute :created_at, Types::DateTime
+      attribute :updated_at, Types::DateTime
+      attribute :kind, Types::String
 
       class UpdateRepresenter < Representable::Decorator
         include Representable::Hash
