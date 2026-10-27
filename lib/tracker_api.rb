@@ -21,8 +21,8 @@ require 'addressable/uri'
 require 'forwardable'
 require 'logger'
 
-MultiJson.load_options = {:mode => :compat}
-MultiJson.dump_options = {:mode => :compat}
+MultiJSON.load_options = {:mode => :compat}
+MultiJSON.dump_options = {:mode => :compat}
 
 module TrackerApi
   autoload :Error, 'tracker_api/error'

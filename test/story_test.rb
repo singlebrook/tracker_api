@@ -92,7 +92,7 @@ describe TrackerApi::Resources::Story do
 
   it 'does not send unmodified fields when saving' do
     story_with_one_change = TrackerApi::Resources::Story::UpdateRepresenter.new(TrackerApi::Resources::Story.new(name: "new_name"))
-    expected_json = MultiJson.dump({name: "new_name"})
+    expected_json = MultiJSON.dump({name: "new_name"})
 
     _(expected_json).must_equal story_with_one_change.to_json
   end
