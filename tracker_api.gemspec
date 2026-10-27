@@ -35,12 +35,10 @@ Gem::Specification.new do |spec|
   # Virtus depends on ostruct, but doesn't list it because it used to be in stdlib
   spec.add_dependency 'ostruct'
 
-  spec.add_dependency 'faraday', ['>= 1.10', '< 3.0']
+  spec.add_dependency 'faraday', ['>= 2.0', '< 3.0']
   spec.add_dependency 'faraday-multipart'
   spec.add_dependency 'equalizer'
   spec.add_dependency 'representable'
   spec.add_dependency 'mini_mime'
-
-  # Pin json to 2.x because 3.x is not compatible with Faraday 1.x's JSON middleware
-  spec.add_dependency 'json', ['< 3.0']
+  spec.add_dependency 'json'
 end
