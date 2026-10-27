@@ -22,7 +22,7 @@ module TrackerApi
       attribute :url, String
 
       class UpdateRepresenter < Representable::Decorator
-        include Representable::JSON
+        include Representable::Hash
 
         property :name
         property :description

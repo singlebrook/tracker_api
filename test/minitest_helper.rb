@@ -13,7 +13,7 @@ require 'mocha'
 require('mocha/minitest')
 
 require 'awesome_print'
-require 'multi_json'
+require 'json'
 require 'vcr'
 
 require 'tracker_api'

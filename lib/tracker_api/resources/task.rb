@@ -15,7 +15,7 @@ module TrackerApi
       attribute :kind, String
 
       class UpdateRepresenter < Representable::Decorator
-        include Representable::JSON
+        include Representable::Hash
 
         property :id
         property :description

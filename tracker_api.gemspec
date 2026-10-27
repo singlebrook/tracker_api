@@ -39,9 +39,8 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'faraday-multipart'
   spec.add_dependency 'equalizer'
   spec.add_dependency 'representable'
-  spec.add_dependency 'multi_json'
   spec.add_dependency 'mini_mime'
 
-  # Temporarily pin json to 2.x because 3.x is not compatible with multi_json
+  # Pin json to 2.x because 3.x is not compatible with Faraday 1.x's JSON middleware
   spec.add_dependency 'json', ['< 3.0']
 end

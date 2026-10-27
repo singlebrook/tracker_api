@@ -17,7 +17,7 @@ module TrackerApi
       attribute :review_type, ReviewType
 
       class UpdateRepresenter < Representable::Decorator
-        include Representable::JSON
+        include Representable::Hash
 
         property :id
         property :review_type_id

@@ -210,7 +210,7 @@ module TrackerApi
       headers = options[:headers]
 
       if (method == :post || method == :put) && options[:body].blank?
-        body                    = MultiJSON.dump(params)
+        body                    = JSON.generate(params.respond_to?(:to_hash) ? params.to_hash : params)
         headers['Content-Type'] = 'application/json'
 
         params = {}

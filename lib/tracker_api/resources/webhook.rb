@@ -13,7 +13,7 @@ module TrackerApi
       attribute :updated_at, DateTime
 
       class UpdateRepresenter < Representable::Decorator
-        include Representable::JSON
+        include Representable::Hash
 
         property :project_id
         property :webhook_url

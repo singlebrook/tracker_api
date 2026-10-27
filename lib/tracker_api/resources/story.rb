@@ -43,7 +43,7 @@ module TrackerApi
 
 
       class UpdateRepresenter < Representable::Decorator
-        include Representable::JSON
+        include Representable::Hash
 
         property :follower_ids, if: ->(_) { !follower_ids.blank? }
         property :name
