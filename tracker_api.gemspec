@@ -28,7 +28,13 @@ Gem::Specification.new do |spec|
   # spec.add_development_dependency 'minitest-byebug'
 
   spec.add_dependency 'addressable'
+
   spec.add_dependency 'virtus'
+  # Virtus depends on axiom-types, which depends on bigdecimal, but doesn't list it because it used to be in stdlib
+  spec.add_dependency 'bigdecimal'
+  # Virtus depends on ostruct, but doesn't list it because it used to be in stdlib
+  spec.add_dependency 'ostruct'
+
   spec.add_dependency 'faraday', ['>= 1.10', '< 3.0']
   spec.add_dependency 'faraday-multipart'
   spec.add_dependency 'equalizer'
