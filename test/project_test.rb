@@ -128,8 +128,8 @@ describe TrackerApi::Resources::Project do
 
     it 'requires an iteration number > 0' do
       VCR.use_cassette('get iteration by number', record: :new_episodes) do
-        _(-> { project.iterations(number: 0) }).must_raise(ArgumentError, /> 0/)
-        _(-> { project.iterations(number: -1) }).must_raise(ArgumentError, /> 0/)
+        _(-> { project.iterations(number: 0) }).must_raise(ArgumentError)
+        _(-> { project.iterations(number: -1) }).must_raise(ArgumentError)
       end
     end
   end
